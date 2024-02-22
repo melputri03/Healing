@@ -13,9 +13,9 @@
 
 		echo "Anda tidak dapat mengakses halaman ini";
 		exit;
-	}  
+	}
 
-	require "koneksi.php"
+	require "koneksi.php";
 
 
 	$id = $_GET["id"];
@@ -50,8 +50,8 @@
 					<td>
 						<select name="level">
 							<option value="admin" <?= $user["level"] == "admin" ? "selected" : "" ?>>admin</option>
-                            <option value="keuangan" <?= $user["level"] == "keuangan" ? "selected" : "" ?>>keuangan</option>
-                            <option value="logistik" <?= $user["level"] == "logistik" ? "selected" : "" ?>>logistik</option>
+							<option value="keuangan" <?= $user["level"] == "keuangan" ? "selected" : "" ?>>keuangan</option>
+							<option value="logistik" <?= $user["level"] == "logistik" ? "selected" : "" ?>>logistik</option>
 						</select>
 					</td>
 				</tr>
@@ -66,4 +66,5 @@
 	</div>
 
 </body>
+
 </html>

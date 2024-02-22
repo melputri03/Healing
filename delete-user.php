@@ -6,20 +6,17 @@ session_start();
 
 if ($_POST["id"] == $_SESSION["id"]) {
 	echo "Tidak bisa hapus user yang sedang aktif";
-	exit
+	exit;
 }
 
 
-$id = $_POST["id"]
+$id = $_POST["id"];
 
-$sql = "DLETE FROM user WHERE id = '$id'";
-mysql_query($koneksi, $sql);
+$sql = "DELETE FROM user WHERE id = '$id'";
+mysqli_query($koneksi, $sql);
 
-if (mysql_error($koneksi)); {
-    echo mysql_error($koneksi);
+if (mysqli_error($koneksi)) {
+	echo mysqli_error($koneksi);
 } else {
 	header("location: user.php");
 }
-
-
-

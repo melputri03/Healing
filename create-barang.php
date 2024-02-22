@@ -1,13 +1,13 @@
 <?php
 
-require "koneksi.php"
+require "koneksi.php";
 
 
-$nama = $_POST["nama"]
-$kategori = $_POST["kategori"]
-$stok = $_POST["stok"]
-$harga_beli = $_POST["harga_beli"]
-$harga_jual = $_POST["harga_jual"]
+$nama = $_POST["nama"];
+$kategori = $_POST["kategori"];
+$stok = $_POST["stok"];
+$harga_beli = $_POST["harga_beli"];
+$harga_jual = $_POST["harga_jual"];
 
 $sql = "INSERT INTO barang (nama, kategori, stok, harga_jual, harga_beli) VELUES ('$nama', '$kategori', '$stok', '$harga_jual', '$harga_beli')";
 mysqli_query($koneksi, $sql);

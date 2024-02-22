@@ -2,23 +2,23 @@
 <html>
 
 <head>
-	<title>Read Barang</title>
+    <title>Read Barang</title>
 </head>
 
 <body>
-	<?php include "menu.php"
+    <?php include "menu.php"; ?>
 
-	<php
-
-
-	require "koneksi.php";
+    <?php
 
 
-	$id = $_GET["id"];
+    require "koneksi.php";
 
 
-	$sql = "SELECT * FROM barang WHERE id = '$id'";
-	$query = mysqli_query($koneksi, $sql);
+    $id = $_GET["id"];
+
+
+    $sql = "SELECT * FROM barang WHERE id = '$id'";
+    $query = mysqli_query($koneksi, $sql);
 
     $barang = mysqli_fetch_array($query);
     ?>
@@ -27,7 +27,7 @@
         <form action="update-barang.php" method="POST">
             <h1>Lihat Barang</h1>
 
-            
+
             <input type="hidden" name="id" value="<?= $id ?>">
 
             <table>
@@ -71,4 +71,5 @@
 
 
 </body>
+
 </html>

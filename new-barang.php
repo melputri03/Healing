@@ -10,14 +10,14 @@
 
     <?php
     if ($_SESSION["level"] != "admin" && $_SESSION["level"] != "logistik") {
-        
+
         echo "Anda tidak dapat mengakses halaman ini";
         exit;
     }
     ?>
 
     <div>
-        
+
         <form action="create-barang.php" method="POST">
             <h1>Tambah Barang</h1>
             <table>

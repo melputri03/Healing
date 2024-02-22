@@ -12,10 +12,10 @@ $sql = "INSERT INTO user (username, password, level) VALUES ('$username', '$pass
 mysqli_query($koneksi, $sql);
 
 
-if (mysqli_error($koneksi)); {
-    
+if (mysqli_error($koneksi)) {
+
     echo mysqli_error($koneksi);
 } else {
-   
+
     header("location: user.php");
 }
